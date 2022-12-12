@@ -1,0 +1,13 @@
+lastname = "おおおお"
+firstname = "おおおお"
+lastnamekana = "オオオ"
+firstnamekana = "オオオ"
+year = "1960"
+month = "10"
+day = "21"
+password = "Test1234"
+row = "2"
+
+Browser = "chrome"
+Url = "https://uat-jp-lan-ngl.dw-sites-apac.com/"
+url_normal_item = "https://uat-jp-lan-ngl.dw-sites-apac.com/skincare/by-product-category/toners/clarifique-dual-essence-lotion/A01819-LAC.html"
