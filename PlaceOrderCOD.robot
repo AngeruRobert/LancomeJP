@@ -73,12 +73,12 @@ Proceed To Checkout
       Run Keyword And Warn On Failure  Click Element    ${submitbuttonsteps_locator}
       Sleep  5s
       Wait Until Page Contains    カート内容  20s
-      Scroll To Element    ${termscheckout_locator}
-      Click Element    ${termscheckout_locator}
-      Wait Until Element Is Enabled    ${submitbuttonsteps_locator}     20s
+      Run Keyword And Warn On Failure  Scroll To Element    ${termscheckout_locator}
+      Run Keyword And Warn On Failure  Click Element    ${termscheckout_locator}
+      Run Keyword And Warn On Failure  Wait Until Element Is Enabled    ${submitbuttonsteps_locator}     20s
       Sleep  3s
-      Click Element    ${submitbuttonsteps_locator}
-      Wait Until Page Contains    ご注文の概要  20s
+      Run Keyword And Warn On Failure  Click Element    ${submitbuttonsteps_locator}
+      Run Keyword And Warn On Failure  Wait Until Page Contains    ご注文の概要  20s
       ${OrderID}=  Get Text  xpath=${orderid_locator}
       Log To Console    ${OrderID}
       Set Global Variable    ${OrderIDvalue}  ${OrderID}
