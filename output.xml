@@ -1,528 +1,291 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.1 (Python 3.11.0 on win32)" generated="20221212 21:25:46.652" rpa="false" schemaversion="3">
-<suite id="s1" name="Register" source="D:\LancomeJP\Register.robot">
-<test id="s1-t1" name="Register Account" line="15">
+<robot generator="Robot 6.0.1 (Python 3.11.1 on win32)" generated="20221213 17:07:48.990" rpa="false" schemaversion="3">
+<suite id="s1" name="PlaceOrderCOD" source="C:\Automation\Lancome JP\PlaceOrderCOD.robot">
+<test id="s1-t1" name="PlaceOrderCOD" line="15">
 <kw name="User opens website" type="SETUP">
 <arg>${Url}</arg>
 <kw name="Open Browser" library="Selenium2Library">
 <arg>${url}</arg>
 <arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221212 21:25:47.497" level="INFO">Opening browser 'chrome' to base url 'https://uat-jp-lan-ngl.dw-sites-apac.com/'.</msg>
-<status status="PASS" starttime="20221212 21:25:47.497" endtime="20221212 21:26:01.208"/>
+<msg timestamp="20221213 17:07:49.612" level="INFO">Opening browser 'chrome' to base url 'https://uat-jp-lan-ngl.dw-sites-apac.com/'.</msg>
+<status status="PASS" starttime="20221213 17:07:49.612" endtime="20221213 17:08:03.765"/>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221212 21:26:01.208" endtime="20221212 21:26:01.450"/>
+<status status="PASS" starttime="20221213 17:08:03.765" endtime="20221213 17:08:03.945"/>
 </kw>
-<status status="PASS" starttime="20221212 21:25:47.497" endtime="20221212 21:26:01.450"/>
+<status status="PASS" starttime="20221213 17:07:49.612" endtime="20221213 17:08:03.946"/>
 </kw>
-<kw name="Go to Register Page">
+<kw name="Go to LogIn Page">
 <kw name="Click Element" library="Selenium2Library">
 <arg>xpath=${LogIn_button}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221212 21:26:01.452" level="INFO">Clicking element 'xpath=//*[@class='c-user__text m-login']'.</msg>
-<status status="PASS" starttime="20221212 21:26:01.451" endtime="20221212 21:26:13.646"/>
+<msg timestamp="20221213 17:08:03.948" level="INFO">Clicking element 'xpath=//*[@class='c-user__text m-login']'.</msg>
+<status status="PASS" starttime="20221213 17:08:03.947" endtime="20221213 17:08:13.957"/>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <arg>ご登録はこちら</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20221212 21:26:13.646" endtime="20221212 21:26:13.659"/>
+<status status="PASS" starttime="20221213 17:08:13.958" endtime="20221213 17:08:13.993"/>
 </kw>
-<kw name="Click Element" library="Selenium2Library">
-<arg>xpath=${Register_button}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221212 21:26:13.659" level="INFO">Clicking element 'xpath=//*[@class='c-button']'.</msg>
-<status status="PASS" starttime="20221212 21:26:13.659" endtime="20221212 21:26:19.888"/>
+<status status="PASS" starttime="20221213 17:08:03.946" endtime="20221213 17:08:13.993"/>
 </kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<arg>アカウント作成</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20221212 21:26:19.889" endtime="20221212 21:26:19.901"/>
-</kw>
-<status status="PASS" starttime="20221212 21:26:01.451" endtime="20221212 21:26:19.901"/>
-</kw>
-<kw name="Fill Form">
-<kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221212 21:26:21.903" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221212 21:26:19.902" endtime="20221212 21:26:21.903"/>
-</kw>
-<kw name="Scroll To Element">
-<arg>xpath=${lastname_locator}</arg>
-<kw name="Get Horizontal Position" library="Selenium2Library">
-<var>${x}</var>
-<arg>${locator}</arg>
-<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
-<msg timestamp="20221212 21:26:21.935" level="INFO">${x} = 366</msg>
-<status status="PASS" starttime="20221212 21:26:21.904" endtime="20221212 21:26:21.935"/>
-</kw>
-<kw name="Get Vertical Position" library="Selenium2Library">
-<var>${y}</var>
-<arg>${locator}</arg>
-<doc>Returns the vertical position of the element identified by ``locator``.</doc>
-<msg timestamp="20221212 21:26:21.958" level="INFO">${y} = 839</msg>
-<status status="PASS" starttime="20221212 21:26:21.935" endtime="20221212 21:26:21.958"/>
-</kw>
-<kw name="Execute Javascript" library="Selenium2Library">
-<arg>window.scrollTo(${x}, ${y})</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221212 21:26:21.959" level="INFO">Executing JavaScript:
-window.scrollTo(366, 839)
-Without any arguments.</msg>
-<status status="PASS" starttime="20221212 21:26:21.958" endtime="20221212 21:26:21.966"/>
-</kw>
-<status status="PASS" starttime="20221212 21:26:21.903" endtime="20221212 21:26:21.966"/>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<arg>xpath=${lastname_locator}</arg>
-<arg>${lastname}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 21:26:21.967" level="INFO">Typing text 'おおおお' into text field 'xpath=//*[starts-with(@id,'lastname-')]'.</msg>
-<status status="PASS" starttime="20221212 21:26:21.966" endtime="20221212 21:26:22.057"/>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<arg>xpath=${firstname_locator}</arg>
-<arg>${firstname}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 21:26:22.058" level="INFO">Typing text 'おおおお' into text field 'xpath=//*[starts-with(@id,'firstname-')]'.</msg>
-<status status="PASS" starttime="20221212 21:26:22.057" endtime="20221212 21:26:22.164"/>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<arg>xpath=${lastnamekana_locator}</arg>
-<arg>${lastnamekana}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 21:26:22.164" level="INFO">Typing text 'オオオ' into text field 'xpath=//*[starts-with(@id,'lastnamekana-')]'.</msg>
-<status status="PASS" starttime="20221212 21:26:22.164" endtime="20221212 21:26:22.260"/>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<arg>xpath=${firstnamekana_locator}</arg>
-<arg>${firstnamekana}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 21:26:22.261" level="INFO">Typing text 'オオオ' into text field 'xpath=//*[starts-with(@id,'firstnamekana-')]'.</msg>
-<status status="PASS" starttime="20221212 21:26:22.260" endtime="20221212 21:26:22.355"/>
-</kw>
-<kw name="Generate Random PhoneNumber" library="RandomGenarationData">
-<kw name="Random Number" library="FakerLibrary">
-<var>${randomnumber}</var>
-<arg>9</arg>
-<doc>Generate a random integer according to the following rules:</doc>
-<msg timestamp="20221212 21:26:22.356" level="INFO">${randomnumber} = 348030873</msg>
-<status status="PASS" starttime="20221212 21:26:22.356" endtime="20221212 21:26:22.356"/>
-</kw>
-<kw name="Set Test Variable" library="BuiltIn">
-<arg>${phone_number}</arg>
-<arg>09${randomnumber}</arg>
-<doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20221212 21:26:22.357" level="INFO">${phone_number} = 09348030873</msg>
-<status status="PASS" starttime="20221212 21:26:22.356" endtime="20221212 21:26:22.357"/>
-</kw>
-<status status="PASS" starttime="20221212 21:26:22.356" endtime="20221212 21:26:22.358"/>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<arg>xpath=${phonenumber_locator}</arg>
-<arg>${phone_number}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 21:26:22.358" level="INFO">Typing text '09348030873' into text field 'xpath=//*[starts-with(@id,'phonemobile-')]'.</msg>
-<status status="PASS" starttime="20221212 21:26:22.358" endtime="20221212 21:26:22.468"/>
-</kw>
-<kw name="Select From List By Value" library="Selenium2Library">
-<arg>xpath=${year_locator}</arg>
-<arg>${year}</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<msg timestamp="20221212 21:26:22.469" level="INFO">Selecting options from selection list 'xpath=//*[@name='year']' by value 1960.</msg>
-<status status="PASS" starttime="20221212 21:26:22.468" endtime="20221212 21:26:22.576"/>
-</kw>
-<kw name="Select From List By Value" library="Selenium2Library">
-<arg>xpath=${month_locator}</arg>
-<arg>${month}</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<msg timestamp="20221212 21:26:22.577" level="INFO">Selecting options from selection list 'xpath=//*[@name='month']' by value 10.</msg>
-<status status="PASS" starttime="20221212 21:26:22.576" endtime="20221212 21:26:22.664"/>
-</kw>
-<kw name="Select From List By Value" library="Selenium2Library">
-<arg>xpath=${day_locator}</arg>
-<arg>${day}</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<msg timestamp="20221212 21:26:22.664" level="INFO">Selecting options from selection list 'xpath=//*[@name='day']' by value 21.</msg>
-<status status="PASS" starttime="20221212 21:26:22.664" endtime="20221212 21:26:22.740"/>
-</kw>
-<kw name="Generate Random Email" library="RandomGenarationData">
-<kw name="Random Number" library="FakerLibrary">
-<var>${randomemail}</var>
-<arg>5</arg>
-<doc>Generate a random integer according to the following rules:</doc>
-<msg timestamp="20221212 21:26:22.741" level="INFO">${randomemail} = 14859</msg>
-<status status="PASS" starttime="20221212 21:26:22.741" endtime="20221212 21:26:22.741"/>
-</kw>
-<kw name="Set Test Variable" library="BuiltIn">
-<arg>${email_valid}</arg>
-<arg>angeru.robert.alexandru+${randomemail}@gmail.com</arg>
-<doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20221212 21:26:22.742" level="INFO">${email_valid} = angeru.robert.alexandru+14859@gmail.com</msg>
-<status status="PASS" starttime="20221212 21:26:22.741" endtime="20221212 21:26:22.742"/>
-</kw>
-<status status="PASS" starttime="20221212 21:26:22.740" endtime="20221212 21:26:22.742"/>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<arg>xpath=${email_locator}</arg>
-<arg>${email_valid}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 21:26:22.743" level="INFO">Typing text 'angeru.robert.alexandru+14859@gmail.com' into text field 'xpath=//body[1]/div[9]/div[2]/main[1]/div[1]/div[1]/div[1]/form[1]/div[17]/div[1]/input[1]'.</msg>
-<status status="PASS" starttime="20221212 21:26:22.742" endtime="20221212 21:26:22.880"/>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<arg>xpath=${comfirmationemail_locator}</arg>
-<arg>${email_valid}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 21:26:22.881" level="INFO">Typing text 'angeru.robert.alexandru+14859@gmail.com' into text field 'xpath=//*[starts-with(@id,'confirmemail-')]'.</msg>
-<status status="PASS" starttime="20221212 21:26:22.880" endtime="20221212 21:26:23.007"/>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<arg>xpath=${password_locator}</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 21:26:23.007" level="INFO">Typing text 'Test1234' into text field 'xpath=//*[starts-with(@id,'password-')]'.</msg>
-<status status="PASS" starttime="20221212 21:26:23.007" endtime="20221212 21:26:23.109"/>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<arg>xpath=${comfirmationpassword_locator}</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 21:26:23.110" level="INFO">Typing text 'Test1234' into text field 'xpath=//*[starts-with(@id,'confirmpassword-')]'.</msg>
-<status status="PASS" starttime="20221212 21:26:23.110" endtime="20221212 21:26:23.192"/>
-</kw>
-<kw name="Scroll To Element">
-<arg>xpath=${privacy_locator}</arg>
-<kw name="Get Horizontal Position" library="Selenium2Library">
-<var>${x}</var>
-<arg>${locator}</arg>
-<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
-<msg timestamp="20221212 21:26:23.206" level="INFO">${x} = 366</msg>
-<status status="PASS" starttime="20221212 21:26:23.193" endtime="20221212 21:26:23.206"/>
-</kw>
-<kw name="Get Vertical Position" library="Selenium2Library">
-<var>${y}</var>
-<arg>${locator}</arg>
-<doc>Returns the vertical position of the element identified by ``locator``.</doc>
-<msg timestamp="20221212 21:26:23.217" level="INFO">${y} = 1742</msg>
-<status status="PASS" starttime="20221212 21:26:23.206" endtime="20221212 21:26:23.217"/>
-</kw>
-<kw name="Execute Javascript" library="Selenium2Library">
-<arg>window.scrollTo(${x}, ${y})</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221212 21:26:23.217" level="INFO">Executing JavaScript:
-window.scrollTo(366, 1742)
-Without any arguments.</msg>
-<status status="PASS" starttime="20221212 21:26:23.217" endtime="20221212 21:26:23.220"/>
-</kw>
-<status status="PASS" starttime="20221212 21:26:23.192" endtime="20221212 21:26:23.220"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221212 21:26:24.221" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20221212 21:26:23.220" endtime="20221212 21:26:24.221"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<arg>xpath=${privacy_locator}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221212 21:26:24.221" endtime="20221212 21:26:24.281"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221212 21:26:25.281" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20221212 21:26:24.281" endtime="20221212 21:26:25.281"/>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<arg>xpath=${privacy_locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221212 21:26:25.282" level="INFO">Clicking element 'xpath=//body[1]/div[9]/div[2]/main[1]/div[1]/div[1]/div[1]/form[1]/div[23]/label[1]'.</msg>
-<status status="PASS" starttime="20221212 21:26:25.281" endtime="20221212 21:26:25.385"/>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<arg>xpath=${submitregister_locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221212 21:26:25.386" level="INFO">Clicking element 'xpath=//*[@class='m-expand m-submit c-field']/button[@name='submit']'.</msg>
-<status status="PASS" starttime="20221212 21:26:25.386" endtime="20221212 21:26:25.464"/>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<arg>ご登録情報</arg>
-<arg>20s</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20221212 21:26:25.464" endtime="20221212 21:26:45.676"/>
-</kw>
-<status status="PASS" starttime="20221212 21:26:19.902" endtime="20221212 21:26:45.676"/>
-</kw>
-<kw name="LogOut" library="LogOut">
-<kw name="Mouse Over" library="Selenium2Library">
-<arg>xpath=${usernameheader_locator}</arg>
-<doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<msg timestamp="20221212 21:26:45.677" level="INFO">Simulating Mouse Over on element 'xpath=//*[@class='c-user__authenticated-welcome']'.</msg>
-<status status="PASS" starttime="20221212 21:26:45.677" endtime="20221212 21:26:45.954"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221212 21:26:47.954" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221212 21:26:45.954" endtime="20221212 21:26:47.954"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<arg>xpath=${usernameheaderlist_locator}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221212 21:26:47.954" endtime="20221212 21:26:47.993"/>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<arg>xpath=${logoutbutton_locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221212 21:26:47.994" level="INFO">Clicking element 'xpath=//*[@class='c-tooltip__body']//a[contains(@href,'Logout')]'.</msg>
-<status status="PASS" starttime="20221212 21:26:47.993" endtime="20221212 21:26:53.144"/>
-</kw>
-<status status="PASS" starttime="20221212 21:26:45.676" endtime="20221212 21:26:53.144"/>
-</kw>
-<kw name="LogIn">
-<kw name="Sleep" library="BuiltIn">
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221212 21:26:58.151" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20221212 21:26:53.150" endtime="20221212 21:26:58.151"/>
-</kw>
+<kw name="LogIn Account">
 <kw name="Input Text" library="Selenium2Library">
 <arg>xpath=${emaillogin_locator}</arg>
-<arg>${email_valid}</arg>
+<arg>${predefinedemail}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 21:26:58.152" level="INFO">Typing text 'angeru.robert.alexandru+14859@gmail.com' into text field 'xpath=//*[starts-with(@data-component-id,'i_')]/input'.</msg>
-<status status="PASS" starttime="20221212 21:26:58.151" endtime="20221212 21:26:58.343"/>
+<msg timestamp="20221213 17:08:13.995" level="INFO">Typing text 'angeru.robert.alexandru@gmail.com' into text field 'xpath=//*[starts-with(@data-component-id,'i_')]/input'.</msg>
+<status status="PASS" starttime="20221213 17:08:13.994" endtime="20221213 17:08:14.116"/>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <arg>xpath=${passwordlogin_locator}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221212 21:26:58.344" level="INFO">Typing text 'Test1234' into text field 'xpath=//*[starts-with(@id,'password-')]'.</msg>
-<status status="PASS" starttime="20221212 21:26:58.344" endtime="20221212 21:26:58.427"/>
+<msg timestamp="20221213 17:08:14.117" level="INFO">Typing text 'Test1234' into text field 'xpath=//*[starts-with(@id,'password-')]'.</msg>
+<status status="PASS" starttime="20221213 17:08:14.117" endtime="20221213 17:08:14.272"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>xpath=${submitlogin_locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221212 21:26:58.427" level="INFO">Clicking element 'xpath=//form[@name='login']/div/button'.</msg>
-<status status="PASS" starttime="20221212 21:26:58.427" endtime="20221212 21:26:58.509"/>
+<msg timestamp="20221213 17:08:14.272" level="INFO">Clicking element 'xpath=//form[@name='login']/div/button'.</msg>
+<status status="PASS" starttime="20221213 17:08:14.272" endtime="20221213 17:08:14.396"/>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <arg>ご登録情報</arg>
 <arg>10s</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20221212 21:26:58.510" endtime="20221212 21:27:06.738"/>
+<status status="PASS" starttime="20221213 17:08:14.396" endtime="20221213 17:08:22.519"/>
+</kw>
+<status status="PASS" starttime="20221213 17:08:13.994" endtime="20221213 17:08:22.519"/>
+</kw>
+<kw name="Go product page and Add to cart">
+<arg>${normal_item_EAN}</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${search_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221213 17:08:22.522" level="INFO">Clicking element '//*[@class='l-header__search-cta']/button'.</msg>
+<status status="PASS" starttime="20221213 17:08:22.521" endtime="20221213 17:08:22.725"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${searchtext_locator}</arg>
+<arg>${product}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221213 17:08:22.726" level="INFO">Typing text '3614273571258' into text field '//*[@class='c-simple-search__field']'.</msg>
+<status status="PASS" starttime="20221213 17:08:22.725" endtime="20221213 17:08:22.801"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>${searchtext_locator}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20221213 17:08:22.801" level="INFO">Sending key(s) ('ENTER',) to //*[@class='c-simple-search__field'] element.</msg>
+<msg timestamp="20221213 17:08:23.101" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20221213 17:08:23.101" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20221213 17:08:22.801" endtime="20221213 17:08:32.095"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${itemname_locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221213 17:08:32.095" endtime="20221213 17:08:32.139"/>
 </kw>
 <kw name="Scroll To Element">
-<arg>xpath=${membership_locator}</arg>
+<arg>xpath=${addproduct_locator}</arg>
 <kw name="Get Horizontal Position" library="Selenium2Library">
 <var>${x}</var>
 <arg>${locator}</arg>
 <doc>Returns the horizontal position of the element identified by ``locator``.</doc>
-<msg timestamp="20221212 21:27:06.755" level="INFO">${x} = 366</msg>
-<status status="PASS" starttime="20221212 21:27:06.739" endtime="20221212 21:27:06.755"/>
+<msg timestamp="20221213 17:08:32.158" level="INFO">${x} = 990</msg>
+<status status="PASS" starttime="20221213 17:08:32.140" endtime="20221213 17:08:32.158"/>
 </kw>
 <kw name="Get Vertical Position" library="Selenium2Library">
 <var>${y}</var>
 <arg>${locator}</arg>
 <doc>Returns the vertical position of the element identified by ``locator``.</doc>
-<msg timestamp="20221212 21:27:06.768" level="INFO">${y} = 1280</msg>
-<status status="PASS" starttime="20221212 21:27:06.755" endtime="20221212 21:27:06.768"/>
+<msg timestamp="20221213 17:08:32.170" level="INFO">${y} = 729</msg>
+<status status="PASS" starttime="20221213 17:08:32.158" endtime="20221213 17:08:32.170"/>
 </kw>
 <kw name="Execute Javascript" library="Selenium2Library">
 <arg>window.scrollTo(${x}, ${y})</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221212 21:27:06.769" level="INFO">Executing JavaScript:
-window.scrollTo(366, 1280)
+<msg timestamp="20221213 17:08:32.171" level="INFO">Executing JavaScript:
+window.scrollTo(990, 729)
 Without any arguments.</msg>
-<status status="PASS" starttime="20221212 21:27:06.768" endtime="20221212 21:27:06.772"/>
+<status status="PASS" starttime="20221213 17:08:32.171" endtime="20221213 17:08:32.175"/>
 </kw>
-<status status="PASS" starttime="20221212 21:27:06.738" endtime="20221212 21:27:06.772"/>
+<status status="PASS" starttime="20221213 17:08:32.139" endtime="20221213 17:08:32.175"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221212 21:27:08.773" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221212 21:27:06.772" endtime="20221212 21:27:08.773"/>
+<msg timestamp="20221213 17:08:34.176" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221213 17:08:32.175" endtime="20221213 17:08:34.176"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
-<arg>xpath=${membership_locator}</arg>
+<arg>xpath=${addproduct_locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221212 21:27:08.774" level="INFO">Clicking element 'xpath=//body[1]/div[9]/div[2]/main[1]/div[1]/aside[1]/div[1]/nav[1]/ul[2]/li[8]/a[1]'.</msg>
-<status status="PASS" starttime="20221212 21:27:08.773" endtime="20221212 21:27:13.144"/>
+<msg timestamp="20221213 17:08:34.177" level="INFO">Clicking element 'xpath=//*[@class='c-product-add-bag']'.</msg>
+<status status="PASS" starttime="20221213 17:08:34.176" endtime="20221213 17:08:34.286"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221212 21:27:16.146" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20221212 21:27:13.144" endtime="20221212 21:27:16.146"/>
-</kw>
-<kw name="Page Should Contain Element" library="Selenium2Library">
-<arg>xpath=${membershipvalidation_locator}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>xpath=${gotocartbutton_locator}</arg>
 <arg>20s</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20221212 21:27:16.169" level="INFO">Current page contains element 'xpath=//h2[contains(text(),'メンバーズカード')]'.</msg>
-<status status="PASS" starttime="20221212 21:27:16.146" endtime="20221212 21:27:16.170"/>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221213 17:08:34.286" endtime="20221213 17:08:40.918"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221212 21:27:17.171" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20221212 21:27:16.170" endtime="20221212 21:27:17.171"/>
+<kw name="Click Element" library="Selenium2Library">
+<arg>xpath=${gotocartbutton_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221213 17:08:40.920" level="INFO">Clicking element 'xpath=//*[@class='c-button  c-add-cart__goto-button']'.</msg>
+<status status="PASS" starttime="20221213 17:08:40.919" endtime="20221213 17:08:47.026"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>カートの内容</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221213 17:08:47.026" endtime="20221213 17:08:47.040"/>
+</kw>
+<status status="PASS" starttime="20221213 17:08:22.520" endtime="20221213 17:08:47.040"/>
+</kw>
+<kw name="Proceed To Checkout">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${proceedcheckout_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221213 17:08:47.040" level="INFO">Clicking element '//*[@class='c-cart-buttons ']/div/button'.</msg>
+<status status="PASS" starttime="20221213 17:08:47.040" endtime="20221213 17:08:47.105"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>連絡先情報の入力</arg>
+<arg>20s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<msg timestamp="20221213 17:09:07.386" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221213 17:09:07.386" level="FAIL">Text '連絡先情報の入力' did not appear in 20 seconds.</msg>
+<status status="FAIL" starttime="20221213 17:08:47.105" endtime="20221213 17:09:07.386"/>
 </kw>
 <kw name="Scroll To Element">
-<arg>xpath=${qrcode_locator}</arg>
-<kw name="Get Horizontal Position" library="Selenium2Library">
-<var>${x}</var>
-<arg>${locator}</arg>
-<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
-<msg timestamp="20221212 21:27:17.191" level="INFO">${x} = 766</msg>
-<status status="PASS" starttime="20221212 21:27:17.171" endtime="20221212 21:27:17.191"/>
+<arg>${zipcode_locator}</arg>
+<status status="NOT RUN" starttime="20221213 17:09:07.386" endtime="20221213 17:09:07.386"/>
 </kw>
-<kw name="Get Vertical Position" library="Selenium2Library">
-<var>${y}</var>
-<arg>${locator}</arg>
-<doc>Returns the vertical position of the element identified by ``locator``.</doc>
-<msg timestamp="20221212 21:27:17.210" level="INFO">${y} = 706</msg>
-<status status="PASS" starttime="20221212 21:27:17.192" endtime="20221212 21:27:17.210"/>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${zipcode_locator}</arg>
+<arg>${zipcode}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221213 17:09:07.386" endtime="20221213 17:09:07.386"/>
 </kw>
-<kw name="Execute Javascript" library="Selenium2Library">
-<arg>window.scrollTo(${x}, ${y})</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221212 21:27:17.211" level="INFO">Executing JavaScript:
-window.scrollTo(766, 706)
-Without any arguments.</msg>
-<status status="PASS" starttime="20221212 21:27:17.210" endtime="20221212 21:27:17.218"/>
+<kw name="Scroll To Element">
+<arg>${prefectures_locator}</arg>
+<status status="NOT RUN" starttime="20221213 17:09:07.386" endtime="20221213 17:09:07.386"/>
 </kw>
-<status status="PASS" starttime="20221212 21:27:17.171" endtime="20221212 21:27:17.218"/>
+<kw name="Select From List By Index" library="Selenium2Library">
+<arg>${prefectures_locator}</arg>
+<arg>${prefectures}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<status status="NOT RUN" starttime="20221213 17:09:07.386" endtime="20221213 17:09:07.386"/>
 </kw>
-<kw name="Get Element Attribute" library="Selenium2Library">
-<var>${lucid}</var>
-<arg>xpath=${qrcode_locator}</arg>
-<arg>title</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20221212 21:27:17.235" level="INFO">${lucid} = C10000003406030</msg>
-<status status="PASS" starttime="20221212 21:27:17.218" endtime="20221212 21:27:17.235"/>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${address_locator}</arg>
+<arg>${address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221213 17:09:07.386" endtime="20221213 17:09:07.386"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${numberaddress_locator}</arg>
+<arg>${numberaddress}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221213 17:09:07.398" endtime="20221213 17:09:07.398"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${submitbuttonsteps_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221213 17:09:07.398" endtime="20221213 17:09:07.398"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>通常配送</arg>
+<arg>20s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20221213 17:09:07.398" endtime="20221213 17:09:07.398"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${submitbuttonsteps_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221213 17:09:07.399" endtime="20221213 17:09:07.399"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>ご本人がお</arg>
+<arg>20s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20221213 17:09:07.399" endtime="20221213 17:09:07.399"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${COD_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221213 17:09:07.399" endtime="20221213 17:09:07.400"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${submitbuttonsteps_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221213 17:09:07.400" endtime="20221213 17:09:07.400"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>カート内容</arg>
+<arg>20s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20221213 17:09:07.400" endtime="20221213 17:09:07.400"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${termscheckout_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221213 17:09:07.400" endtime="20221213 17:09:07.400"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<arg>${submitbuttonsteps_locator}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20221213 17:09:07.401" endtime="20221213 17:09:07.401"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${submitbuttonsteps_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221213 17:09:07.401" endtime="20221213 17:09:07.401"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>ご注文の概要</arg>
+<arg>20s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20221213 17:09:07.401" endtime="20221213 17:09:07.401"/>
+</kw>
+<kw name="Get WebElements xpath=${orderid_locator}">
+<var>${OrderID}</var>
+<status status="NOT RUN" starttime="20221213 17:09:07.417" endtime="20221213 17:09:07.417"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>${lucid}</arg>
+<arg>${OrderID}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221212 21:27:17.235" endtime="20221212 21:27:17.235"/>
+<status status="NOT RUN" starttime="20221213 17:09:07.417" endtime="20221213 17:09:07.417"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
-<arg>${lucidvalue}</arg>
-<arg>${lucid}</arg>
+<arg>${OrderIDvalue}</arg>
+<arg>${OrderID}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20221212 21:27:17.236" level="INFO">${lucidvalue} = C10000003406030</msg>
-<status status="PASS" starttime="20221212 21:27:17.235" endtime="20221212 21:27:17.236"/>
+<status status="NOT RUN" starttime="20221213 17:09:07.417" endtime="20221213 17:09:07.417"/>
 </kw>
-<status status="PASS" starttime="20221212 21:26:53.149" endtime="20221212 21:27:17.236"/>
+<status status="FAIL" starttime="20221213 17:08:47.040" endtime="20221213 17:09:07.418"/>
 </kw>
-<kw name="Save Data in Excel">
-<kw name="Open Excel Document" library="ExcelLibrary">
-<arg>TestAccounts.xlsx</arg>
-<arg>Accounts</arg>
-<doc>Opens xlsx document file.</doc>
-<status status="PASS" starttime="20221212 21:27:17.237" endtime="20221212 21:27:17.244"/>
-</kw>
-<kw name="Read Excel Cell" library="ExcelLibrary">
-<var>${row}</var>
-<arg>1</arg>
-<arg>7</arg>
-<doc>Returns content of a cell.</doc>
-<msg timestamp="20221212 21:27:17.244" level="INFO">${row} = 3</msg>
-<status status="PASS" starttime="20221212 21:27:17.244" endtime="20221212 21:27:17.244"/>
-</kw>
-<kw name="Write Excel Cell" library="ExcelLibrary">
-<arg>${row}</arg>
-<arg>1</arg>
-<arg>${email_valid}</arg>
-<arg>Sheet</arg>
-<doc>Writes value to the cell.</doc>
-<status status="PASS" starttime="20221212 21:27:17.244" endtime="20221212 21:27:17.244"/>
-</kw>
-<kw name="Write Excel Cell" library="ExcelLibrary">
-<arg>${row}</arg>
-<arg>2</arg>
-<arg>${password}</arg>
-<arg>Sheet</arg>
-<doc>Writes value to the cell.</doc>
-<status status="PASS" starttime="20221212 21:27:17.244" endtime="20221212 21:27:17.245"/>
-</kw>
-<kw name="Write Excel Cell" library="ExcelLibrary">
-<arg>${row}</arg>
-<arg>3</arg>
-<arg>${firstnamekana}</arg>
-<arg>Sheet</arg>
-<doc>Writes value to the cell.</doc>
-<status status="PASS" starttime="20221212 21:27:17.245" endtime="20221212 21:27:17.245"/>
-</kw>
-<kw name="Write Excel Cell" library="ExcelLibrary">
-<arg>${row}</arg>
-<arg>4</arg>
-<arg>${lastnamekana}</arg>
-<arg>Sheet</arg>
-<doc>Writes value to the cell.</doc>
-<status status="PASS" starttime="20221212 21:27:17.246" endtime="20221212 21:27:17.246"/>
-</kw>
-<kw name="Write Excel Cell" library="ExcelLibrary">
-<arg>${row}</arg>
-<arg>5</arg>
-<arg>${phone_number}</arg>
-<arg>Sheet</arg>
-<doc>Writes value to the cell.</doc>
-<status status="PASS" starttime="20221212 21:27:17.246" endtime="20221212 21:27:17.246"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${lucidvalue}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221212 21:27:17.246" endtime="20221212 21:27:17.248"/>
-</kw>
-<kw name="Write Excel Cell" library="ExcelLibrary">
-<arg>${row}</arg>
-<arg>6</arg>
-<arg>${lucidvalue}</arg>
-<arg>Sheet</arg>
-<doc>Writes value to the cell.</doc>
-<status status="PASS" starttime="20221212 21:27:17.248" endtime="20221212 21:27:17.249"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${row}</var>
-<arg>${row}+1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20221212 21:27:17.249" level="INFO">${row} = 4</msg>
-<status status="PASS" starttime="20221212 21:27:17.249" endtime="20221212 21:27:17.249"/>
-</kw>
-<kw name="Write Excel Cell" library="ExcelLibrary">
-<arg>1</arg>
-<arg>7</arg>
-<arg>${row}</arg>
-<doc>Writes value to the cell.</doc>
-<status status="PASS" starttime="20221212 21:27:17.249" endtime="20221212 21:27:17.250"/>
-</kw>
-<kw name="Save Excel Document" library="ExcelLibrary">
-<arg>TestAccounts.xlsx</arg>
-<doc>Saves the current document to disk.</doc>
-<status status="PASS" starttime="20221212 21:27:17.250" endtime="20221212 21:27:17.268"/>
-</kw>
-<status status="PASS" starttime="20221212 21:27:17.237" endtime="20221212 21:27:17.269"/>
-</kw>
-<status status="PASS" starttime="20221212 21:25:47.496" endtime="20221212 21:27:17.269"/>
+<status status="FAIL" starttime="20221213 17:07:49.612" endtime="20221213 17:09:07.419">Text '連絡先情報の入力' did not appear in 20 seconds.</status>
 </test>
-<status status="PASS" starttime="20221212 21:25:46.654" endtime="20221212 21:27:17.270"/>
+<status status="FAIL" starttime="20221213 17:07:48.990" endtime="20221213 17:09:07.421"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Register">Register</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="PlaceOrderCOD">PlaceOrderCOD</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20221213 17:07:49.294" level="ERROR">Error in file 'C:\Automation\Lancome JP\Register.robot' on line 6: Setting 'Test Setup' is not allowed in resource file.</msg>
+<msg timestamp="20221213 17:07:49.294" level="ERROR">Error in file 'C:\Automation\Lancome JP\PlaceOrderCOD.robot' on line 7: Error in file 'C:\Automation\Lancome JP\Register.robot' on line 14: Resource file with 'Test Cases' section is invalid.</msg>
 </errors>
 </robot>

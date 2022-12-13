@@ -36,3 +36,7 @@ zipcode_locator = "//input[@id='dwfrm_billing_billingAddress_addressFields_zip']
 prefectures_locator = "//select[@id='dwfrm_billing_billingAddress_addressFields_district']"
 address_locator = "//input[@id='dwfrm_billing_billingAddress_addressFields_city']"
 numberaddress_locator = "//input[@id='dwfrm_billing_billingAddress_addressFields_address1']"
+submitbuttonsteps_locator = "//*[@name='dwfrm_checkout_sectionNext']"
+COD_locator = "//*[@for='is-COD']"
+termscheckout_locator = "//*[@for='agree-site-terms-checkbox-bottom']"
+orderid_locator = "//span[contains(text(),'D')]"
