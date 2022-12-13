@@ -17,7 +17,7 @@ PlaceOrderCOD
     LogIn Account
     Go product page and Add to cart  ${normal_item_EAN}
     Proceed To Checkout
-
+    Save Data in Excel
     
 *** Keywords ***
 User opens website
@@ -57,22 +57,23 @@ Proceed To Checkout
       Click Element    ${proceedcheckout_locator}
       Wait Until Page Contains    連絡先情報の入力  20s
       Sleep  3s
-      Scroll To Element    ${zipcode_locator}
-      Input Text    ${zipcode_locator}    ${zipcode}
-      Scroll To Element    ${prefectures_locator}
-      Select From List By Index    ${prefectures_locator}  ${prefectures}
-      Input Text    ${address_locator}    ${address}
-      Input Text    ${numberaddress_locator}    ${numberaddress}
-      Click Element    ${submitbuttonsteps_locator}
+      Run Keyword And Warn On Failure  Scroll To Element    ${zipcode_locator}
+      Run Keyword And Warn On Failure  Input Text    ${zipcode_locator}    ${zipcode}
+      Run Keyword And Warn On Failure  Scroll To Element    ${prefectures_locator}
+      Run Keyword And Warn On Failure  Select From List By Index    ${prefectures_locator}  ${prefectures}
+      Run Keyword And Warn On Failure  Input Text    ${address_locator}    ${address}
+      Run Keyword And Warn On Failure  Input Text    ${numberaddress_locator}    ${numberaddress}
+      Run Keyword And Warn On Failure  Click Element    ${submitbuttonsteps_locator}
       Sleep  4s
-      Wait Until Page Contains    通常配送  20s
-      Click Element    ${submitbuttonsteps_locator}
+      Run Keyword And Warn On Failure  Wait Until Page Contains    通常配送  20s
+      Run Keyword And Warn On Failure  Click Element    ${submitbuttonsteps_locator}
       Sleep  4s
-      Wait Until Page Contains    ご本人がお  20s
-      Click Element    ${COD_locator}
-      Click Element    ${submitbuttonsteps_locator}
-      Sleep  4s
+      Run Keyword And Warn On Failure  Wait Until Page Contains    ご本人がお  20s
+      Run Keyword And Warn On Failure  Click Element    ${COD_locator}
+      Run Keyword And Warn On Failure  Click Element    ${submitbuttonsteps_locator}
+      Sleep  5s
       Wait Until Page Contains    カート内容  20s
+      Scroll To Element    ${termscheckout_locator}
       Click Element    ${termscheckout_locator}
       Wait Until Element Is Enabled    ${submitbuttonsteps_locator}     20s
       Sleep  3s
