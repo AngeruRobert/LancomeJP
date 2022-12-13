@@ -13,7 +13,11 @@ Resource  Register.robot
 
 *** Test Cases ***
 Test Random
-    Create Excel Document      Orders
-    Save Excel Document    Orders.xlsx
+    Open Browser  ${url}  ${Browser}
+    Maximize Browser Window
+    ${OrderID}=  Get Text  xpath=//h2[@class='c-section__title h-text-align-center']
+    Log To Console    ${OrderID}
+
+
 #    Write Excel Cell    ${row}    1    asd    Sheet
 #    Save Excel Document    TestAccounts.xlsx

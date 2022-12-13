@@ -4,7 +4,7 @@ Library  ExcelLibrary
 Library    XML
 Variables  Data.py
 Variables  Locators.py
-Resource  Register.robot
+#Resource  Register.robot
 Resource  RandomGenarationData.robot
 Test Setup  User opens website  ${Url}
 
@@ -31,13 +31,13 @@ Scroll To Element
     Execute Javascript  window.scrollTo(${x}, ${y})
 Go to LogIn Page
     Click Element  xpath=${LogIn_button}
-    Wait Until Page Contains    ご登録はこちら
+    Wait Until Page Contains    ご登録はこちら  20s
 
 LogIn Account
     Input Text    xpath=${emaillogin_locator}    ${predefinedemail}
     Input Text    xpath=${passwordlogin_locator}    ${password}
     Click Element    xpath=${submitlogin_locator}
-    Wait Until Page Contains    ご登録情報  10s
+    Wait Until Page Contains    ご登録情報  60s
 
 Go product page and Add to cart
     [Arguments]  ${product}
@@ -53,8 +53,10 @@ Go product page and Add to cart
     Wait Until Page Contains    カートの内容
 
 Proceed To Checkout
+      Sleep  1s
       Click Element    ${proceedcheckout_locator}
       Wait Until Page Contains    連絡先情報の入力  20s
+      Sleep  3s
       Scroll To Element    ${zipcode_locator}
       Input Text    ${zipcode_locator}    ${zipcode}
       Scroll To Element    ${prefectures_locator}
@@ -62,17 +64,21 @@ Proceed To Checkout
       Input Text    ${address_locator}    ${address}
       Input Text    ${numberaddress_locator}    ${numberaddress}
       Click Element    ${submitbuttonsteps_locator}
+      Sleep  4s
       Wait Until Page Contains    通常配送  20s
       Click Element    ${submitbuttonsteps_locator}
+      Sleep  4s
       Wait Until Page Contains    ご本人がお  20s
       Click Element    ${COD_locator}
       Click Element    ${submitbuttonsteps_locator}
+      Sleep  4s
       Wait Until Page Contains    カート内容  20s
       Click Element    ${termscheckout_locator}
       Wait Until Element Is Enabled    ${submitbuttonsteps_locator}     20s
+      Sleep  3s
       Click Element    ${submitbuttonsteps_locator}
       Wait Until Page Contains    ご注文の概要  20s
-      ${OrderID}=  Get WebElements xpath=${orderid_locator}
+      ${OrderID}=  Get Text  xpath=${orderid_locator}
       Log To Console    ${OrderID}
       Set Global Variable    ${OrderIDvalue}  ${OrderID}
 
